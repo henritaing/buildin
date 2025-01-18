@@ -1,0 +1,188 @@
+/* Global styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Ensure no horizontal scrolling */
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar container */
+  .navbar-container {
+    display: flex;
+    justify-content: space-between; /* Spaced out items */
+    align-items: center;
+    height: 80px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Logo styling */
+  .navbar-logo {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+  }
+  
+  /* Menu items (desktop view) */
+  .nav-menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    list-style: none;
+    text-align: center;
+    width: 60vw; /* Adjust the menu width */
+    justify-content: end;
+  
+  }
+  
+  /* Menu item styling */
+  .nav-item {
+    height: 80px;
+  }
+  
+  .nav-links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+  }
+  
+  /* Hover effect for nav-links */
+  .nav-links:hover {
+    background-color: #fff;
+    color: #242424;
+    border-radius: 0;
+    border-bottom: none; /* Remove border on hover */
+  }
+  
+  /* Mobile menu icon */
+  .menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .fa-bars {
+    color: #fff;
+  }
+  
+  /* Media query for mobile screens */
+  @media screen and (max-width: 960px) {
+    /* Adjust navbar container padding for smaller screens */
+    .navbar-container {
+      padding: 0 10px;
+    }
+  
+    /* Make the menu items vertical on smaller screens */
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 90vh;
+      position: absolute;
+      top: 80px;
+      background-color: #242222;
+      opacity: 0;
+      transition: opacity 0.5s ease-out;
+      left: 0; 
+      z-index: 1;
+    }
+  
+    .nav-menu.active {
+      opacity: 1;
+      background: #242222;
+      padding: 0;
+    
+      z-index: 1;
+
+    }
+  
+    .nav-menu li {
+      width: 100%; 
+    }
+  
+    .nav-links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%; 
+      display: table;
+    }
+  
+    .navbar-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(10%, 50%);
+    }
+  
+    /* Menu icon to toggle the mobile menu */
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 60%);
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #fff;
+    }
+  
+    .fa-times {
+      color: #fff;
+      font-size: 2rem;
+    }
+  
+    /* Mobile link hover effect */
+    .nav-links-mobile {
+      display: block;
+      text-align: center;
+      margin: 2rem auto;
+      border-radius: 4px;
+      width: 80%;
+      text-decoration: none;
+      font-size: 1.5rem;
+      background-color: transparent;
+      color: #fff;
+      padding: 14px 20px;
+      border: 1px solid #fff;
+      transition: all 0.3s ease-out;
+    }
+  
+    /* Hover effect for mobile links */
+    .nav-links-mobile:hover {
+      background: #fff;
+      color: #242424;
+      transition: 250ms;
+    }
+       
+  }
+  
+  
