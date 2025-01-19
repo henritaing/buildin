@@ -1,19 +1,23 @@
-/* Global styles */
+* {
+  font-family: Arial, sans-serif;
+}
+
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow-x: hidden; /* Ensure no horizontal scrolling */
+    overflow-x: hidden; 
+    
   }
-  
-  /* Navbar styling */
+
   .navbar {
     background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
     font-size: 1.2rem;
     position: sticky;
     top: 0;
@@ -26,11 +30,12 @@ html, body {
   /* Navbar container */
   .navbar-container {
     display: flex;
-    justify-content: space-between; /* Spaced out items */
+    justify-content: space-between; 
     align-items: center;
     height: 80px;
     max-width: 100%;
     width: 100%;
+   
     box-sizing: border-box;
   }
   
@@ -45,7 +50,6 @@ html, body {
     margin-left: 1rem;
   }
   
-  /* Menu items (desktop view) */
   .nav-menu {
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -56,9 +60,9 @@ html, body {
   
   }
   
-  /* Menu item styling */
   .nav-item {
     height: 80px;
+    
   }
   
   .nav-links {
@@ -73,15 +77,16 @@ html, body {
     transition: all 0.3s ease-out;
   }
   
-  /* Hover effect for nav-links */
+
   .nav-links:hover {
     background-color: #fff;
     color: #242424;
     border-radius: 0;
-    border-bottom: none; /* Remove border on hover */
+    border-bottom: none; 
+
   }
   
-  /* Mobile menu icon */
+ 
   .menu-icon {
     display: none;
     font-size: 30px;
@@ -92,14 +97,11 @@ html, body {
     color: #fff;
   }
   
-  /* Media query for mobile screens */
   @media screen and (max-width: 960px) {
-    /* Adjust navbar container padding for smaller screens */
     .navbar-container {
       padding: 0 10px;
     }
   
-    /* Make the menu items vertical on smaller screens */
     .nav-menu {
       display: flex;
       flex-direction: column;
@@ -120,13 +122,14 @@ html, body {
       opacity: 1;
       background: #242222;
       padding: 0;
-    
+     
       z-index: 1;
 
     }
   
     .nav-menu li {
       width: 100%; 
+      
     }
   
     .nav-links {
@@ -143,7 +146,6 @@ html, body {
       transform: translate(10%, 50%);
     }
   
-    /* Menu icon to toggle the mobile menu */
     .menu-icon {
       display: block;
       position: absolute;
@@ -160,7 +162,6 @@ html, body {
       font-size: 2rem;
     }
   
-    /* Mobile link hover effect */
     .nav-links-mobile {
       display: block;
       text-align: center;
@@ -176,7 +177,6 @@ html, body {
       transition: all 0.3s ease-out;
     }
   
-    /* Hover effect for mobile links */
     .nav-links-mobile:hover {
       background: #fff;
       color: #242424;

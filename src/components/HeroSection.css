@@ -1,12 +1,26 @@
 .hero-container { 
-
-    background: url('../../public/logo512.png') center center/cover 
-    no-repeat;
+    background-color: black;
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     object-fit: contain;
+    font: arial;
+}
+
+.hero-container > h1 {
+    color: #fff;
+    font-size: 10vh;
+    margin-top: 50px;
+    margin-left: 5vh;
+  }
+
+.hero-btns {
+    margin-left: 5vh;
+}
+
+.hero-btns .btn {
+    margin: 6px;
 }
