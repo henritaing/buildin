@@ -19,8 +19,14 @@
 
 .hero-btns {
     margin-left: 5vh;
+    
 }
 
 .hero-btns .btn {
     margin: 6px;
+}
+
+
+.faPlayCircle {
+    margin-left: 2px;
 }

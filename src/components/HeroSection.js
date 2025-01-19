@@ -20,7 +20,7 @@ function HeroSection() {
                 className="btns" 
                 buttonStyle='btn--outline'
                 buttonSize='btn--large'>
-                    Regardez le trailer <FontAwesomeIcon icon= {faPlayCircle} />
+                    Regardez le trailer <FontAwesomeIcon className ="faPlayCircle" icon= {faPlayCircle} />
                 </Button>
             </div>
         </div>
