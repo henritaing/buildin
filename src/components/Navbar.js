@@ -11,32 +11,32 @@ function Navbar() {
     const closeMobileMenu = () => setClick(false);
 
    
-    
     return (
         <>
             <nav className="navbar">
                 <div className="navbar-container">
-                    <Link to="/" className="navbar-logo">
-                        BUILDIN
-                    </Link>
+                <Link to="/" className="navbar-logo">
+                    <img src="./images/buildinlogo.png" alt="Logo" />
+                </Link>
+
                     <div className="menu-icon" onClick={handleClick}>
                         <FontAwesomeIcon icon={click ? faTimes : faBars} />
                     </div>
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
                       
                         <li className="nav-item">
-                            <Link to="/a-propos" className="nav-links" onClick={closeMobileMenu}>
+                            <Link to="/A-propos" className="nav-links" onClick={closeMobileMenu}>
                                 A propos de nous
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/contact" className="nav-links" onClick={closeMobileMenu}>
+                            <Link to="/Contact" className="nav-links" onClick={closeMobileMenu}>
                                 Nous contacter
                             </Link>
                         </li>
                        
                         <li className="nav-item">
-                            <Link to="/nous-rejoindre" className="nav-links" onClick={closeMobileMenu}>
+                            <Link to="/Nous_rejoindre" className="nav-links" onClick={closeMobileMenu}>
                                 Nous rejoindre
                             </Link>
                         </li>

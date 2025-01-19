@@ -8,7 +8,8 @@ import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 function HeroSection() {
     return (
         <div className='hero-container'>
-            <h1>Qu'attendez-vous ?</h1>
+            <h1>Un week-end <br></br>
+            pour repousser ses limites</h1>
             <div className="hero-btns">
                 <Button 
                 className="btns" 
