@@ -24,11 +24,7 @@ function Navbar() {
                     </div>
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
                       
-                        <li className="nav-item">
-                            <Link to="/A-propos" className="nav-links" onClick={closeMobileMenu}>
-                                A propos de nous
-                            </Link>
-                        </li>
+        
                         <li className="nav-item">
                             <Link to="/Contact" className="nav-links" onClick={closeMobileMenu}>
                                 Nous contacter
