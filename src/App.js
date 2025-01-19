@@ -7,6 +7,8 @@ import Home from './components/pages/Home';
 
 function App() {
   return (
+    
+
     <>
     <Router>
     <Navbar/>
@@ -14,7 +16,7 @@ function App() {
       <Route path ='/' element = 
       { <Home />} />
     </Routes>
-
+    
     </Router>    
     
     

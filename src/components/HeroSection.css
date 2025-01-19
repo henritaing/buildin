@@ -31,6 +31,84 @@
     margin-left: 2px;
 }
 
+/* Popup form styles */
+.popup-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-form-content {
+  position:absolute;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333; 
+}
+
+.close-icon:hover {
+  color: red; 
+}
+
+.popup-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-form label {
+  margin-bottom: 5px;
+}
+
+.popup-form input {
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.popup-form button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-form button:hover {
+  background-color: #45a049;
+}
+
+.close-btn {
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: darkred;
+}
+
+
 @media screen and (max-width: 960px) {
     .hero-btns {
         margin-right: 5vh;
@@ -60,4 +138,26 @@
     .btn {
       width: 100%;
     }
+
+  .popup-form-content {
+    width: 100%; 
+    padding: 15px; 
+    max-width: 90%; 
+  }
+
+  .popup-form input {
+    font-size: 14px;
+    padding: 8px; 
+  }
+
+  .popup-form button {
+    font-size: 14px; 
+    padding: 8px; 
+  }
+
+  .close-icon {
+    font-size: 22px; 
+    top: 8px; 
+    right: 8px;
+  }
   }
