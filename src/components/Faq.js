@@ -8,6 +8,10 @@ const FAQ = () => {
     
     const questions = [
       {
+        question: "En quoi consiste exactement l'événement ?",
+        answer: "L'événement consiste en deux jours, deux nuits où les participants travailleront par équipe soit sur un thème, soit sur une problématique proposée par une association ou une entreprise, soit sur un projet personnel. Le but est de s'amuser, apprendre et proposer une première solution utilisable à la fin du week-end et de la présenter devant un jury."
+      },
+      {
         question: "Y a t-il une sélection pour participer à l'événement ?",
         answer: "Les profils sont choisis pour avoir des équipes motivées et équilibrées."
       },
@@ -25,11 +29,16 @@ const FAQ = () => {
       },
       {
         question: "Comment se déroule l'événement ?",
-        answer: "Si vous êtes choisi, vous serez contacté par un membre de l'équipe organisatrice. Tous les détails quant à la logistique seront récapitulés dans un mail. L'événement aura parfois un thème, parfois une problématique proposée par l'association, mais nous encourageons les projets personnels, donc si vous avez une idée, n'hésitez pas à la proposer et à la creuser pendant ce week-end ! Le but est de s'amuser, apprendre et proposer une première solution utilisable."
+        answer: "Si vous êtes choisi, vous serez contacté par un membre de l'équipe organisatrice. Tous les détails quant à la logistique seront récapitulés dans un mail."
+      },
+      ,
+      {
+        question: "Avez-vous des sponsors ou des partenaires ?",
+        answer: "Non, mais si vous voulez nous rejoindre, ce serait avec plaisir ;). Vous pouvez nous contacter directement à l'adresse suivante : association@buildin.com"
       },
       {
         question: "Qui puis-je contacter si j'ai d'autres questions ou si j'ai un souci ?",
-        answer: "Vous pouvez utiliser le formulaire ci-dessous ou envoyer un mail directement à l'adresse suivante : association@buildin.com"
+        answer: "Vous pouvez envoyer un mail directement à l'adresse suivante : association@buildin.com"
       }
     ];
   
@@ -41,7 +50,7 @@ const FAQ = () => {
 return (
     
     <div className="faq-container">
-    <h1> Questions classiques que l'on peut entendre </h1>
+    <h1 className="Titre_question"> Questions classiques que l'on peut entendre </h1>
       {questions.map((faq, index) => (
         <div key={index} className="faq-item">
           <div 

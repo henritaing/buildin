@@ -3,7 +3,7 @@
     --text-dark: #242424; /* Dark color for text */
   }
   
-  /* Basic button style */
+  
   .btn {
     padding: 8px 20px;
     border-radius: 2px;
@@ -13,7 +13,6 @@
     transition: all 0.3s ease-out;
   }
   
-  /* Default primary button style */
   .btn--primary {
     background-color: var(--primary);
     color: var(--text-dark);
@@ -40,17 +39,16 @@
     font-size: 20px;
   }
   
-  /* Hover effect: change background to white and text to black */
   .btn--outline:hover {
-    background-color: #fff; /* White background */
-    color: #242424; /* Black text */
-    border: 1px solid #242424; /* Black border */
+    background-color: #fff; 
+    color: #242424; 
+    border: 1px solid #242424; 
   }
   
   .btn--primary:hover {
-    background-color: #fff; /* White background */
-    color: #242424; /* Black text */
-    border: 1px solid #242424; /* Black border */
+    background-color: #fff; 
+    color: #242424; 
+    border: 1px solid #242424; 
   }
   
   /* Hover effect for medium and large buttons */
@@ -62,3 +60,14 @@
     border: 1px solid #242424;
   }
   
+  @media screen and (max-width: 768px) {
+  .btn--medium {
+    padding: 7px 16px;
+    font-size: 14px;
+  }
+  
+  .btn--large {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  }

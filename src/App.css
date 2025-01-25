@@ -1,4 +1,19 @@
+
+
+html, body {
+    height: 100%; /* Ensures full height for the body */
+    margin: 0; /* Removes the default margin */
+  }
+  
+.App {
+display: flex;
+flex-direction: column;
+min-height: 100vh; /* Full height of the viewport */
+}
+
 .menu-icon i {
     font-size: 24px; /* Set size of icons */
     color: #000; /* Set icon color */
 }
+
+  
