@@ -12,7 +12,7 @@ function Navbar() {
         <div className="nav-items">
           <div className="nav-item">
             <Link to="/Questions" className="nav-links">
-              Contact
+              Questions
             </Link>
           </div>
         </div>
