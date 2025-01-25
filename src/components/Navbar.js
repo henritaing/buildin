@@ -16,7 +16,7 @@ function Navbar() {
             <nav className="navbar">
                 <div className="navbar-container">
                 <Link to="/" className="navbar-logo">
-                    <img src="./images/buildinlogo.png" alt="Logo" />
+                    <img src="../../images/buildinlogo.png" alt="Logo" />
                 </Link>
 
                     <div className="menu-icon" onClick={handleClick}>
@@ -26,8 +26,8 @@ function Navbar() {
                       
         
                         <li className="nav-item">
-                            <Link to="/Contact" className="nav-links" onClick={closeMobileMenu}>
-                                Nous contacter
+                            <Link to="/Questions" className="nav-links" onClick={closeMobileMenu}>
+                                FAQ
                             </Link>
                         </li>
                        
