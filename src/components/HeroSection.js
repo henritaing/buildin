@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../App.css'
 import { Button } from './Button';
 import './HeroSection.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
@@ -16,8 +15,8 @@ function HeroSection() {
 
     return (
         <div className='hero-container'>
-            <h1>Un week-end <br></br>
-            pour repousser ses limites</h1>
+            <h1>Un week-end pour repousser<br></br>
+             ses limites</h1>
             <div className="hero-btns">
                 <Button 
                 className="btns" 
@@ -25,13 +24,13 @@ function HeroSection() {
                 buttonSize='btn--large'
                 onClick = {toggleForm}
                 >
-                    Inscrivez-vous
+                    Register
                 </Button>
                 <Button 
                 className="btns" 
                 buttonStyle='btn--outline'
                 buttonSize='btn--large'>
-                    Regardez le trailer <FontAwesomeIcon className ="faPlayCircle" icon= {faPlayCircle} />
+                    Watch the trailer <FontAwesomeIcon className ="faPlayCircle" icon= {faPlayCircle} />
                 </Button>
             </div>
 
@@ -43,17 +42,17 @@ function HeroSection() {
                     icon={faTimes} 
                     onClick={toggleForm} 
                     />
-                    <h2>Formulaire d'inscription</h2>
+                    <h2>Registration Form</h2>
                     <form>
-                    <label htmlFor="name">Nom :</label>
-                    <input type="text" id="name" placeholder="Votre nom" required />
-                    <label htmlFor="email">Email :</label>
-                    <input type="email" id="email" placeholder="Votre email" required />
-                    <label htmlFor="métier">Votre métier ou domaine d'activité/d'études :</label>
-                    <input type="métier" id="métier" placeholder="Votre métier ou domaine d'activité/d'études" required />
-                    <label htmlFor="description">Quelques mots sur vous, pour vous décrire ? </label>
-                    <input type="description" id="description" placeholder="Quelques mots sur vous, pour vous décrire ?" required />
-                    <button type="submit">S'inscrire</button>
+                    <label htmlFor="name">Name:</label>
+                    <input type="text" id="name" placeholder="Your full name" required />
+                    <label htmlFor="email">Email:</label>
+                    <input type="email" id="email" placeholder="Your email address" required />
+                    <label htmlFor="job">Your job/domain of studies:</label>
+                    <input type="job" id="job" placeholder="Your job/domain of studies" required />
+                    <label htmlFor="description">A few words that characterize you? </label>
+                    <input type="description" id="description" placeholder="A few words that characterize you?" required />
+                    <button type="submit">Register</button>
                     </form>
                 </div>
             </div>
