@@ -61,8 +61,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%; /* Ensure there's a margin on both sides */
-    max-width: 1000px; /* Constrain the width to prevent stretching */
+    width: 90%; 
+    max-width: 1000px; 
     margin: 40px auto 0 auto;
   }
   

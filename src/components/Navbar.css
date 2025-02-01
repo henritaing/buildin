@@ -16,7 +16,7 @@ html, body {
 /* Navbar styles */
 .navbar {
   background-color: white;
-  height: 80px;
+  height: 90px;
   display: flex;
   padding: 0 20px;
   position: sticky;
@@ -33,7 +33,7 @@ html, body {
 
 .navbar-logo img {
   height: auto;
-  width: 150px; /* Adjust size of the logo */
+  width: 80px; /* Adjust size of the logo */
 }
 
 .nav-items {
@@ -58,7 +58,6 @@ html, body {
   transition: all 0.2s ease-out;
 }
 
-/* Responsive styles for small screens */
 @media screen and (max-width: 960px) {
   .nav-items {
     font-size: 1rem;

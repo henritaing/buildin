@@ -8,13 +8,13 @@ function Footer() {
         <div class='footer-links'>
             <div className='footer-link-wrapper'>
                 <div class='footer-link-items'>
-                    <h2>A propos</h2>
+                    <h2>About</h2>
                     <Link to='/Questions'>Questions</Link>
                 </div>
             </div>
             <div className='footer-link-wrapper'>
                 <div class='footer-link-items'>
-                    <h2>Nos réseaux</h2>
+                    <h2>Socials</h2>
                     <Link to='/'>Instagram</Link>
                     <Link to='/'>LinkedIn</Link>
                 </div>

@@ -15,8 +15,8 @@ function HeroSection() {
 
     return (
         <div className='hero-container'>
-            <h1>Un week-end pour repousser<br></br>
-             ses limites</h1>
+            <h1>Join us at our next hackathon <br></br>
+            to build the future</h1>
             <div className="hero-btns">
                 <Button 
                 className="btns" 

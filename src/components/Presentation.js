@@ -5,13 +5,20 @@ import './Presentation.css';
 
 
 function Presentation() {
-    
-
     return (
-        <div className='presentation-container'>
-            <h1>Buildin, hackathons for you, for all</h1>
-            <h2>Projects that caught our eye</h2>
+        <div className='intro-container'>
+            <div className="text-container">
+                <h1>Buildin, hackathons <br></br>
+                    for all</h1>
+                <p>Born from the love of collaboration and innovation.</p>
+                <br></br>
+                <p>Our hackathons bring together motivated individuals to tackle real-world challenges and to make lifelong memories.</p>
+            </div>
+            <div className="image-container">
+                <img src="../../images/imagepresentation.png" alt = "Hackhathon" className="intro-image"></img>
+            </div>
         </div>
+     
     )
 }
 

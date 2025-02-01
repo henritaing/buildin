@@ -1,44 +1,43 @@
 import React, { useState } from 'react';
 import './Faq.css';
 
-<h1> Questions classiques que l'on peut entendre </h1>
+
 const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(null);
     
     
     const questions = [
       {
-        question: "En quoi consiste exactement l'événement ?",
-        answer: "L'événement consiste en deux jours, deux nuits où les participants travailleront par équipe soit sur un thème, soit sur une problématique proposée par une association ou une entreprise, soit sur un projet personnel. Le but est de s'amuser, apprendre et proposer une première solution utilisable à la fin du week-end et de la présenter devant un jury."
+        question: "What's the format of the hackathons?",
+        answer: "It's about two days, two nights, where participants work in teams either on a theme, either on a problem suggested by an organizaion. The goal is to have fun and learn!"
       },
       {
-        question: "Y a t-il une sélection pour participer à l'événement ?",
-        answer: "Les profils sont choisis pour avoir des équipes motivées et équilibrées."
+        question: "Is there a selection to participate in the event?",
+        answer: "As long you are motivated, you're on!"
       },
       {
-        question: "Est-ce que ça veut dire que je ne peux pas participer en tant que junior ?",
-        answer: "Absolument pas, tout le monde est encouragé à participer !"
+        question: "Can I participate if I'm a beginner?",
+        answer: "Obviously, you're welcome, but be prepared to pull all-nighters ;)!"
       },
       {
-        question: "Quand et où se fera l'événement ?",
-        answer: "L'événement se déroule généralement fin juin dans un village accessible par transports communs."
+        question: "When and where will they take place?",
+        answer: "They take place generally end of June in a village accessible by train or bus."
       },
       {
-        question: "Est-ce que l'événement est payant ?",
-        answer: "Une cotisation sera demandée aux participants. L'association fait néanmoins en sorte que celle-ci soit la plus basse possible."
+        question: "Is the event free?",
+        answer: "A participation fee will be asked. Nevertheless, we try to make sure it's the lowest possible."
       },
       {
-        question: "Comment se déroule l'événement ?",
-        answer: "Si vous êtes choisi, vous serez contacté par un membre de l'équipe organisatrice. Tous les détails quant à la logistique seront récapitulés dans un mail."
-      },
-      ,
-      {
-        question: "Avez-vous des sponsors ou des partenaires ?",
-        answer: "Non, mais si vous voulez nous rejoindre, ce serait avec plaisir ;). Vous pouvez nous contacter directement à l'adresse suivante : association@buildin.com"
+        question: "How does it work after I register?",
+        answer: "If you're chosen, you'll be contacted by a member of the association. All details will be recap'ed in a mail."
       },
       {
-        question: "Qui puis-je contacter si j'ai d'autres questions ou si j'ai un souci ?",
-        answer: "Vous pouvez envoyer un mail directement à l'adresse suivante : association@buildin.com"
+        question: "Do you have any sponsors or partners?",
+        answer: "Not yet, but if you have any ideas, it's very much welcome! You can contact us directly at the following email address: association@buildin.com"
+      },
+      {
+        question: "Who can I contact if I have other questions or issues?",
+        answer: "Please send a mail directly to the following address: association@buildin.com"
       }
     ];
   
@@ -50,7 +49,7 @@ const FAQ = () => {
 return (
     
     <div className="faq-container">
-    <h1 className="Titre_question"> Questions classiques que l'on peut entendre </h1>
+    <h1 className="Titre_question"> Common questions </h1>
       {questions.map((faq, index) => (
         <div key={index} className="faq-item">
           <div 
