@@ -1,3 +1,8 @@
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .hero-container {
   background-color: #002576;
   min-height: 85vh; 
@@ -11,7 +16,7 @@
   justify-content: flex-start;  /* Align content vertically to the top */
   align-items: flex-end;        /* Align content horizontally to the right */
   padding-right: 2rem;
-
+  overflow-x: hidden;
 }
 
 .hero-container > h1 {
@@ -20,12 +25,14 @@
     margin-top: 6%;
     margin-left: 5vh;
     margin-bottom: 2%;
+    animation: fadeIn 5s;
  
   }
 
 .hero-btns {
     margin-top: 10vh;
     margin-left: 5vh;   
+    animation: fadeIn 6s;
 }
 
 
