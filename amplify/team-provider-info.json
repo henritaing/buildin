@@ -17,6 +17,12 @@
           "deploymentBucketName": "amplify-buildin-dev-fe4fa-deployment",
           "s3Key": "amplify-builds/buildin3d398e13-7842726d79454372766a-build.zip"
         }
+      },
+      "api": {
+        "api9d292554": {}
+      },
+      "storage": {
+        "FormSubmissions": {}
       }
     }
   }

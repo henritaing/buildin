@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/items": {
+      "name": "/items",
+      "lambdaFunction": "buildin3d398e13",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

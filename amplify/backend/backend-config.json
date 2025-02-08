@@ -1,4 +1,20 @@
 {
+  "api": {
+    "api9d292554": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "buildin3d398e13"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "function": {
     "buildin3d398e13": {
       "build": true,
@@ -22,6 +38,12 @@
           "resourceName": "buildin3d398e13"
         }
       ]
+    }
+  },
+  "storage": {
+    "FormSubmissions": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
     }
   }
 }
