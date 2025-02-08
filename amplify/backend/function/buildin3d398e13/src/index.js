@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk');  
 const dynamoDB = new AWS.DynamoDB.DocumentClient();  
 
-export const handler = async (event) => {
+const handler = async (event) => {
     const allowedOrigins = ['https://main.d37yh6mm3isrxo.amplifyapp.com', '*']; // You can restrict this to your frontend's URL for security
 
     // Handle the OPTIONS preflight request (CORS preflight)
@@ -67,3 +67,5 @@ export const handler = async (event) => {
         body: JSON.stringify({ message: 'Method Not Allowed' }),
     };
 };
+
+module.exports = { handler };
