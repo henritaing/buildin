@@ -23,7 +23,7 @@ const handler = async (event) => {
 
         // Define the parameters to insert the data into DynamoDB
         const params = {
-            TableName: 'FormSubmissions', 
+            TableName: 'FormSubmissions-dev', 
             Item: {
                 id: AWS.util.uuid.v4(), 
                 name,
