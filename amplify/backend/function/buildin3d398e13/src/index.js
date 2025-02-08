@@ -1,4 +1,4 @@
-import AWS from 'aws-sdk';  // Using ES Module import syntax
+const AWS = require('aws-sdk');  // Using ES Module import syntax
 const dynamoDB = new AWS.DynamoDB.DocumentClient();  // Initialize DynamoDB client
 
 export const handler = async (event) => {
