@@ -2,7 +2,11 @@ const AWS = require('aws-sdk');
 const dynamoDB = new AWS.DynamoDB.DocumentClient();
 
 const handler = async (event) => {
-    console.log('Received event:', JSON.stringify(event, null, 2));
+    // Add detailed logging
+    console.log('Full event:', JSON.stringify(event, null, 2));
+    console.log('HTTP Method:', event.httpMethod);
+    console.log('Request context:', JSON.stringify(event.requestContext, null, 2));
+    console.log('Event body:', event.body);
     
     const allowedOrigins = ['https://main.d37yh6mm3isrxo.amplifyapp.com'];
     const headers = {
@@ -12,7 +16,11 @@ const handler = async (event) => {
         'Content-Type': 'application/json'
     };
 
-    if (event.httpMethod === 'OPTIONS') {
+    // Check both possible locations for HTTP method
+    const method = event.httpMethod || event.requestContext?.httpMethod;
+    console.log('Detected method:', method);
+
+    if (method === 'OPTIONS') {
         return {
             statusCode: 200,
             headers,
@@ -20,9 +28,13 @@ const handler = async (event) => {
         };
     }
 
-    if (event.httpMethod === 'POST') {
+    if (method === 'POST') {
         try {
-            const { name, email, job, description } = JSON.parse(event.body);
+            console.log('Processing POST request');
+            const bodyContent = typeof event.body === 'string' ? JSON.parse(event.body) : event.body;
+            console.log('Parsed body:', bodyContent);
+
+            const { name, email, job, description } = bodyContent;
             
             const params = {
                 TableName: 'FormSubmissions-dev',
@@ -60,6 +72,7 @@ const handler = async (event) => {
         }
     }
 
+    console.log('Method not allowed:', method);
     return {
         statusCode: 405,
         headers,
