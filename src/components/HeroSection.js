@@ -30,7 +30,7 @@ function HeroSection() {
         
         try {
             const response = await axios.post(
-                'https://l3kiz03f2a.execute-api.eu-north-1.amazonaws.com/dev',
+                'https://l3kiz03f2a.execute-api.eu-north-1.amazonaws.com/dev/items',
                 formData
             );
             alert('Form submitted successfully!');
