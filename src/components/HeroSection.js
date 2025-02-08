@@ -37,7 +37,7 @@ function HeroSection() {
             setShowForm(false); 
         } catch (error) {
             console.error('Error submitting form:', error);
-            alert('Failed to submit the form');
+            alert(`Failed to submit the form. Reason: ${error.message}`);
         }
     };
 

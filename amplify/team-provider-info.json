@@ -15,7 +15,7 @@
       "function": {
         "buildin3d398e13": {
           "deploymentBucketName": "amplify-buildin-dev-fe4fa-deployment",
-          "s3Key": "amplify-builds/buildin3d398e13-6579654e6d346d48584e-build.zip"
+          "s3Key": "amplify-builds/buildin3d398e13-58486b3161424e765646-build.zip"
         }
       },
       "api": {

@@ -2,7 +2,7 @@ const AWS = require('aws-sdk');  // Use CommonJS require for AWS SDK
 const dynamoDB = new AWS.DynamoDB.DocumentClient();  
 
 const handler = async (event) => {
-    const allowedOrigins = ['https://main.d37yh6mm3isrxo.amplifyapp.com', '*']; // You can restrict this to your frontend's URL for security
+    const allowedOrigins = ['https://main.d37yh6mm3isrxo.amplifyapp.com']; // You can restrict this to your frontend's URL for security
 
     // Handle the OPTIONS preflight request (CORS preflight)
     if (event.httpMethod === 'OPTIONS') {
