@@ -1,5 +1,4 @@
-import AWS from 'aws-sdk';
-
+const AWS = require('aws-sdk');  // Use CommonJS require for AWS SDK
 const dynamoDB = new AWS.DynamoDB.DocumentClient();  
 
 const handler = async (event) => {
