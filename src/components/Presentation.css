@@ -42,7 +42,7 @@
 .intro-container .image-container {
   display: flex;
   align-items: center;
-  margin-left: 10vh;
+  margin-left: 5vh;
 }
 
 .intro-container .image-container .intro-image {

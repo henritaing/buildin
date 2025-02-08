@@ -3,14 +3,42 @@ import { Button } from './Button';
 import './HeroSection.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faPlayCircle, faTimes } from '@fortawesome/free-solid-svg-icons';
-
-
+import axios from 'axios';
 
 function HeroSection() {
     const [showForm, setShowForm] = useState(false); // State to manage form visibility
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        job: '',
+        description: ''
+    });
 
     const toggleForm = () => {
     setShowForm(!showForm); // Toggle the visibility of the form
+    };
+
+    const handleInputChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.id]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        
+        try {
+            const response = await axios.post(
+                'https://w3w2hlf0gb.execute-api.eu-north-1.amazonaws.com/prod', // Replace with your API Gateway endpoint
+                formData
+            );
+            alert('Form submitted successfully!');
+            setShowForm(false); // Close the form after successful submission
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert('Failed to submit the form');
+        }
     };
 
     return (
@@ -43,16 +71,44 @@ function HeroSection() {
                     onClick={toggleForm} 
                     />
                     <h2>Registration Form</h2>
-                    <form>
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" id="name" placeholder="Your full name" required />
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" placeholder="Your email address" required />
-                    <label htmlFor="job">Your job/domain of studies:</label>
-                    <input type="job" id="job" placeholder="Your job/domain of studies" required />
-                    <label htmlFor="description">A few words that characterize you? </label>
-                    <input type="description" id="description" placeholder="A few words that characterize you?" required />
-                    <button type="submit">Register</button>
+                    <form onSubmit={handleSubmit}>
+                            <label htmlFor="name">Name:</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                value={formData.name} 
+                                onChange={handleInputChange} 
+                                placeholder="Your full name" 
+                                required 
+                            />
+                            <label htmlFor="email">Email:</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                value={formData.email} 
+                                onChange={handleInputChange} 
+                                placeholder="Your email address" 
+                                required 
+                            />
+                            <label htmlFor="job">Your job/domain of studies:</label>
+                            <input 
+                                type="text" 
+                                id="job" 
+                                value={formData.job} 
+                                onChange={handleInputChange} 
+                                placeholder="Your job/domain of studies" 
+                                required 
+                            />
+                            <label htmlFor="description">A few words that characterize you?</label>
+                            <input 
+                                type="text" 
+                                id="description" 
+                                value={formData.description} 
+                                onChange={handleInputChange} 
+                                placeholder="A few words that characterize you?" 
+                                required 
+                            />
+                            <button type="submit">Register</button>
                     </form>
                 </div>
             </div>
