@@ -30,7 +30,7 @@ function HeroSection() {
         
         try {
             const response = await axios.post(
-                'https://w3w2hlf0gb.execute-api.eu-north-1.amazonaws.com/prod', // Replace with your API Gateway endpoint
+                'https://w3w2hlf0gb.execute-api.eu-north-1.amazonaws.com/prod',
                 formData
             );
             alert('Form submitted successfully!');

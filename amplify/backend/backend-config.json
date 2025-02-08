@@ -1,0 +1,27 @@
+{
+  "function": {
+    "buildin3d398e13": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_buildin3d398e13_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "buildin3d398e13"
+        }
+      ]
+    },
+    "AMPLIFY_function_buildin3d398e13_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "buildin3d398e13"
+        }
+      ]
+    }
+  }
+}
