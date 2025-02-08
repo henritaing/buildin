@@ -34,7 +34,7 @@ function HeroSection() {
                 formData
             );
             alert('Form submitted successfully!');
-            setShowForm(false); // Close the form after successful submission
+            setShowForm(false); 
         } catch (error) {
             console.error('Error submitting form:', error);
             alert('Failed to submit the form');
