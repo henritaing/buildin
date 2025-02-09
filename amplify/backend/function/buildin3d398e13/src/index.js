@@ -2,12 +2,16 @@ const AWS = require('aws-sdk');
 const dynamoDB = new AWS.DynamoDB.DocumentClient();
 
 const handler = async (event) => {
-    // Add detailed logging
+    // Add debug logging right at the start
+    console.log('=============== DEBUG START ===============');
+    console.log('Event type:', typeof event);
     console.log('Full event:', JSON.stringify(event, null, 2));
     console.log('HTTP Method:', event.httpMethod);
-    console.log('Request context:', JSON.stringify(event.requestContext, null, 2));
-    console.log('Event body:', event.body);
-    
+    console.log('Request Method:', event.requestContext?.httpMethod);
+    console.log('Body type:', typeof event.body);
+    console.log('Body content:', event.body);
+    console.log('=============== DEBUG END ===============');
+
     const allowedOrigins = ['https://main.d37yh6mm3isrxo.amplifyapp.com'];
     const headers = {
         'Access-Control-Allow-Origin': allowedOrigins.join(','),
@@ -16,23 +20,21 @@ const handler = async (event) => {
         'Content-Type': 'application/json'
     };
 
-    // Check both possible locations for HTTP method
-    const method = event.httpMethod || event.requestContext?.httpMethod;
+    // Check method from both possible locations
+    const method = event.requestContext?.httpMethod || event.httpMethod;
     console.log('Detected method:', method);
 
-    if (method === 'OPTIONS') {
-        return {
-            statusCode: 200,
-            headers,
-            body: JSON.stringify({})
-        };
-    }
-
-    if (method === 'POST') {
-        try {
+    try {
+        if (method === 'POST') {
             console.log('Processing POST request');
-            const bodyContent = typeof event.body === 'string' ? JSON.parse(event.body) : event.body;
-            console.log('Parsed body:', bodyContent);
+            let bodyContent;
+            try {
+                bodyContent = typeof event.body === 'string' ? JSON.parse(event.body) : event.body;
+                console.log('Parsed body:', bodyContent);
+            } catch (e) {
+                console.error('Error parsing body:', e);
+                throw new Error('Invalid request body');
+            }
 
             const { name, email, job, description } = bodyContent;
             
@@ -59,27 +61,27 @@ const handler = async (event) => {
                     message: 'Form submitted successfully'
                 })
             };
-        } catch (err) {
-            console.error('Error:', err);
-            return {
-                statusCode: 500,
-                headers,
-                body: JSON.stringify({
-                    message: 'Error submitting form',
-                    error: err.message
-                })
-            };
         }
-    }
 
-    console.log('Method not allowed:', method);
-    return {
-        statusCode: 405,
-        headers,
-        body: JSON.stringify({
-            message: 'Method Not Allowed'
-        })
-    };
+        console.log(`Method ${method} not allowed`);
+        return {
+            statusCode: 405,
+            headers,
+            body: JSON.stringify({
+                message: 'Method Not Allowed'
+            })
+        };
+    } catch (err) {
+        console.error('Error:', err);
+        return {
+            statusCode: 500,
+            headers,
+            body: JSON.stringify({
+                message: 'Error processing request',
+                error: err.message
+            })
+        };
+    }
 };
 
 module.exports = { handler };
