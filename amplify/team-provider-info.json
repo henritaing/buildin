@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-buildin-dev-cf17e-authRole",
+      "UnauthRoleArn": "arn:aws:iam::703671901687:role/amplify-buildin-dev-cf17e-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::703671901687:role/amplify-buildin-dev-cf17e-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-buildin-dev-cf17e-deployment",
+      "UnauthRoleName": "amplify-buildin-dev-cf17e-unauthRole",
+      "StackName": "amplify-buildin-dev-cf17e",
+      "StackId": "arn:aws:cloudformation:eu-north-1:703671901687:stack/amplify-buildin-dev-cf17e/8f02a3d0-e6c7-11ef-83c1-067bc2620e3b",
+      "AmplifyAppId": "d1tngld65mjcp"
+    },
+    "categories": {
+      "function": {
+        "HandleForm": {
+          "deploymentBucketName": "amplify-buildin-dev-cf17e-deployment",
+          "s3Key": "amplify-builds/HandleForm-4e624335314d6e736d70-build.zip"
+        }
+      },
+      "storage": {
+        "FormSubmissions": {}
+      },
+      "api": {
+        "FormSubmissionsAPI": {}
+      }
+    }
+  }
+}

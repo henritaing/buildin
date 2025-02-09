@@ -3,10 +3,10 @@ import { Button } from './Button';
 import './HeroSection.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faPlayCircle, faTimes } from '@fortawesome/free-solid-svg-icons';
-import axios from 'axios';
+import { API } from 'aws-amplify';
 
 function HeroSection() {
-    const [showForm, setShowForm] = useState(false); // State to manage form visibility
+    const [showForm, setShowForm] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -15,7 +15,7 @@ function HeroSection() {
     });
 
     const toggleForm = () => {
-    setShowForm(!showForm); // Toggle the visibility of the form
+        setShowForm(!showForm);
     };
 
     const handleInputChange = (e) => {
@@ -29,18 +29,24 @@ function HeroSection() {
         e.preventDefault();
         
         try {
-            const response = await axios.post(
-                'https://l3kiz03f2a.execute-api.eu-north-1.amazonaws.com/dev/items',
-                formData
-            );
+            const response = await API.post('FormSubmissionsAPI', '/items', {
+                body: formData
+            });
             alert('Form submitted successfully!');
-            setShowForm(false); 
+            setShowForm(false);
+            // Reset form
+            setFormData({
+                name: '',
+                email: '',
+                job: '',
+                description: ''
+            });
         } catch (error) {
             console.error('Error submitting form:', error);
-            alert(`Failed to submit the form. Reason: ${error.message}`);
+            alert('Failed to submit the form. Please try again.');
         }
     };
-
+    
     return (
         <div className='hero-container'>
             <h1>Join us at our next hackathon <br></br>
