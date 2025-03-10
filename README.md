@@ -1,6 +1,6 @@
 # Introduction
 
-This project was designed in order to provide a Minimal Viable Product Website for my Buildin assocation. It is fully in French as its first edition will take place in France with French-speaking participants.  
+This project was designed in order to provide a Minimal Viable Product Website for my Buildin assocation.   
 
 I relied on the basic web development skills I acquired during my Masters, on the following tutorial [Create React App](https://github.com/facebook/create-react-app), [React documentation](https://react.dev/), and ChatGPT.
 
